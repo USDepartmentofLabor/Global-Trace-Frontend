@@ -1,0 +1,119 @@
+default:
+  retry:
+    max: 2
+    when: runner_system_failure
+
+include:
+  - project: 'diginexhk/tools/shared-assets/ci-cd'
+    ref: master
+    file: main.yml
+
+### Variables
+.develop: &develop_vars
+  variables:
+    HELM_CONFIG: dev.values.yaml
+    ENV_FILE: develop
+    NAMESPACE: usdol-dev
+    DEPLOYMENT_NAME: usdol-frontend
+    URL: https://usdol.dev.dgnx.io
+    ENVIRONMENT: dev
+    KUBE_CONFIG: $DEV3_KUBE_CONFIG
+
+.qa: &qa_vars
+  variables:
+    HELM_CONFIG: qa.values.yaml
+    ENV_FILE: qa
+    NAMESPACE: usdol-qa
+    DEPLOYMENT_NAME: usdol-frontend
+    URL: https://usdol.qa.dgnx.io
+    ENVIRONMENT: qa
+    KUBE_CONFIG: $DEV3_KUBE_CONFIG
+
+.staging: &staging_vars
+  variables:
+    HELM_CONFIG: uat.values.yaml
+    ENV_FILE: staging
+    NAMESPACE: usdol-uat
+    DEPLOYMENT_NAME: usdol-frontend
+    URL: https://usdol.uat.dgnx.io
+    ENVIRONMENT: uat
+    KUBE_CONFIG: $DEV3_KUBE_CONFIG
+
+.staging2: &staging2_vars
+  variables:
+    HELM_CONFIG: uat2.values.yaml
+    ENV_FILE: staging2
+    NAMESPACE: usdol-uat2
+    DEPLOYMENT_NAME: usdol-frontend
+    URL: https://usdol.uat2.dgnx.io
+    ENVIRONMENT: uat2
+    KUBE_CONFIG: $DEV3_KUBE_CONFIG
+
+.master: &master_vars
+  variables:
+    HELM_CONFIG: prod.values.yaml
+    ENV_FILE: master
+    NAMESPACE: usdol-prod
+    DEPLOYMENT_NAME: usdol-frontend
+    URL: https://usdol.diginex.com
+    ENVIRONMENT: prod
+    KUBE_CONFIG: $PROD_KUBE_CONFIG
+
+### Base Job
+.base:
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'develop'
+      <<: *develop_vars
+    - if: $CI_COMMIT_BRANCH == 'qa'
+      <<: *qa_vars
+    - if: $CI_COMMIT_BRANCH == 'staging'
+      <<: *staging_vars
+    - if: $CI_COMMIT_BRANCH == 'staging2'
+      <<: *staging2_vars
+    - if: $CI_COMMIT_BRANCH == 'master' && $CI_JOB_STAGE == 'deploy'
+      when: manual
+      <<: *master_vars
+    - if: $CI_COMMIT_BRANCH == 'master' && $CI_JOB_STAGE != 'deploy'
+      <<: *master_vars
+
+stages:
+  - build_source
+  - build_image
+  - publish_artifact
+  - deploy
+#  - e2e_test
+
+build_source:
+  stage: build_source
+  extends:
+    - .base
+    - .build_source_frontend
+
+build_image:
+  stage: build_image
+  extends:
+    - .base
+    - .build_image_frontend
+
+# code_analysis:
+#   stage: test
+#   extends:
+#     - .code_analysis
+
+deploy:
+  stage: deploy
+  extends:
+    - .base
+    - .notification
+    - .deploy_frontend
+
+#e2e_test_dev:
+#  stage: e2e_test
+#  variables:
+#    ENVIRONMENT: dev
+#  trigger:
+#    project: diginexhk/usdol/usdol-e2e
+#    strategy: depend
+#    branch: develop
+#  only:
+#    - develop

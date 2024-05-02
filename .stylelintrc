@@ -1,0 +1,26 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components"
+  ],
+  "rules": {
+    "selector-pseudo-element-colon-notation": "single",
+    "number-leading-zero": "never",
+    "font-family-no-missing-generic-family-keyword": null,
+    "declaration-empty-line-before": "never",
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": [
+        "mixin",
+        "include",
+        "function",
+        "return",
+        "if",
+        "extend",
+        "at-root",
+        "for"
+      ]
+    }]
+  }
+}
