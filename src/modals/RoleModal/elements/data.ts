@@ -1,0 +1,152 @@
+export default {
+  'Open Supply Hub ID': [
+    {
+      id: 'b9695cc4-e158-4901-84f0-82306179823f',
+      createdAt: 1711332005,
+      updatedAt: 1711332005,
+      name: 'OS ID',
+      type: 'Open Supply Hub ID',
+      category: 'TEXT',
+      nameTranslation: {
+        en: 'OS ID',
+      },
+      options: [],
+    },
+    {
+      id: '1a8bc34f-55c9-4a6e-ba5a-2911cc8c23cf',
+      createdAt: 1711332005,
+      updatedAt: 1711332005,
+      name: 'Business Name',
+      type: 'Open Supply Hub ID',
+      category: 'TEXT',
+      nameTranslation: {
+        en: 'Business Name',
+      },
+      options: [],
+    },
+    {
+      id: 'd2bad782-2c38-46f4-ad37-e7b6b4d0d5f2',
+      createdAt: 1711332005,
+      updatedAt: 1711332005,
+      name: 'Country',
+      type: 'Open Supply Hub ID',
+      category: 'TEXT',
+      nameTranslation: {
+        en: 'Country',
+      },
+      options: [],
+    },
+    {
+      id: 'dbe6bb25-2dc1-4585-8d94-a970df00e6af',
+      createdAt: 1711332005,
+      updatedAt: 1711332005,
+      name: 'Province/State',
+      type: 'Open Supply Hub ID',
+      category: 'TEXT',
+      nameTranslation: {
+        en: 'Province/State',
+      },
+      options: [],
+    },
+    {
+      id: 'e207977c-41a9-48ef-a87b-f1b8e29102c6',
+      createdAt: 1711332005,
+      updatedAt: 1711332005,
+      name: 'District',
+      type: 'Open Supply Hub ID',
+      category: 'TEXT',
+      nameTranslation: {
+        en: 'District',
+      },
+      options: [],
+    },
+    {
+      id: 'dc891249-c91f-42f5-a19d-19ba42f742ee',
+      createdAt: 1711332005,
+      updatedAt: 1711332005,
+      name: 'Address',
+      type: 'Open Supply Hub ID',
+      category: 'TEXT',
+      nameTranslation: {
+        en: 'Address',
+      },
+      options: [],
+    },
+  ],
+  'Responsible Mineral Initiative CID': [
+    {
+      id: 'd04b1741-5ee4-486d-831b-bbb9052404ee',
+      createdAt: 1711332005,
+      updatedAt: 1711332005,
+      name: 'Responsible Mineral Initiative CID',
+      type: 'Responsible Mineral Initiative CID',
+      category: 'TEXT',
+      nameTranslation: {
+        en: 'Responsible Mineral Initiative CID',
+      },
+      options: [],
+    },
+    {
+      id: '41d4a600-2f69-48af-bccf-57866ac64e2e',
+      createdAt: 1711332005,
+      updatedAt: 1711332005,
+      name: 'Facility ID',
+      type: 'Responsible Mineral Initiative CID',
+      category: 'TEXT',
+      nameTranslation: {
+        en: 'Facility ID',
+      },
+      options: [],
+    },
+    {
+      id: 'c5f18753-c520-4364-b7da-bd9c1c30bbfc',
+      createdAt: 1711332005,
+      updatedAt: 1711332005,
+      name: 'Facility name',
+      type: 'Responsible Mineral Initiative CID',
+      category: 'TEXT',
+      nameTranslation: {
+        en: 'Facility name',
+      },
+      options: [],
+    },
+    {
+      id: '74b72143-e6f5-4e8b-97ce-e04ec9d4c49f',
+      createdAt: 1711332005,
+      updatedAt: 1711332005,
+      name: 'Metal',
+      type: 'Responsible Mineral Initiative CID',
+      category: 'TEXT',
+      nameTranslation: {
+        en: 'Metal',
+      },
+      options: [],
+    },
+    {
+      id: '3b9f2fc4-aede-45ab-8a24-8f737e49609c',
+      createdAt: 1711332005,
+      updatedAt: 1711332005,
+      name: 'Country location',
+      type: 'Responsible Mineral Initiative CID',
+      category: 'TEXT',
+      nameTranslation: {
+        en: 'Country location',
+      },
+      options: [],
+    },
+  ],
+  'Internal Identifier system': [
+    {
+      id: '3b1f82a1-44fe-4b1d-a23a-47f455354ca4',
+      createdAt: 1711332005,
+      updatedAt: 1711332005,
+      name: 'Internal Id',
+      type: 'Internal Identifier system',
+      category: 'TEXT',
+      nameTranslation: {
+        en: 'Internal Id',
+      },
+      options: [],
+    },
+  ],
+} as any;
