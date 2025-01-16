@@ -1,0 +1,35 @@
+dockercfg:
+  enabled: true
+  image:
+    pullSecret:
+      registry: registry.gitlab.com
+      username: josiah.choi_diginex
+      password: __IMAGE_REPOSITORY_PASSWORD__
+
+image:
+  repository: registry.gitlab.com/diginexhk/usdol/usdol-frontend
+  tag: "__CI_PIPELINE_ID__"
+  pullSecrets:
+    - usdol-frontend-dockercfg
+
+deployment:
+  enabled: true
+
+service:
+  enabled: true
+  ports:
+    default:
+      internal: 80
+      external: 80
+
+virtualService:
+  enabled: true
+  hosts:
+    - "globaltrace.qa.dgnx.io"
+  gateways:
+    - default/ingressgateway-qa-dgnx-io
+  routes:
+    default:
+      destination:
+        host: usdol-frontend-monochart
+        port: 80

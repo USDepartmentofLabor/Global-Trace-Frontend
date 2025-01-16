@@ -1,0 +1,9 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "prConcurrentLimit": 5,
+  "assignees": ["hodfords_viet_senior_fe"],
+  "labels": ["renovate"]
+}
