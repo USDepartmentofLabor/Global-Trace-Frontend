@@ -1,0 +1,61 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "allowJs": true,
+    "jsx": "preserve",
+    "jsxFactory": "VueTsxSupport",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strictNullChecks": false,
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": false,
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "./",
+    "paths": {
+      "i18n/*": ["i18n/*"],
+      "containers/*": ["src/containers/*"],
+      "enums/*": ["src/enums/*"],
+      "modals/*": ["src/modals/*"],
+      "types/*": ["src/types/*"],
+      "assets/*": ["assets/*"],
+      "actions/*": ["src/actions/*"],
+      "styles/*": ["src/styles/*"],
+      "config/*": ["src/config/*"],
+      "components/*": ["src/components/*"],
+      "api/*": ["src/api/*"],
+      "pages/*": ["src/pages/*"],
+      "store/*": ["src/store/*"],
+      "utils/*": ["src/utils/*"],
+      "mixins/*": ["src/mixins/*"],
+      "middlewares/*": ["src/middlewares/*"],
+      "styled/*": ["src/styled/*"],
+      "DiginexComponent/*": ["*"]
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["vue-tsx-support"],
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  },
+  "include": [
+    "node_modules/vue-tsx-support/enable-check.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  "exclude": ["node_modules"]
+}
