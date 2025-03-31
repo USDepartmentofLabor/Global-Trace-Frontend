@@ -10,12 +10,12 @@ Global Trace enables brands, producers, and manufacturers to track and trace pro
 
 Global Trace was engineered to be customizable and flexible to accommodate any type of supply chain. Six configuration steps are required to set up an "instance" of Global Trace specific to the needs of the organization managing the deployment of the system. These steps are further detailed below in the Technical Documentation.
 
-1. [Define the products in the supply chain](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/confluence/define_product/index.html) and assign Key Data Elements (KDEs) to each product.
-2. [Define the user roles and user permissions](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/confluence/define_role/index.html) in the Global Trace instance.
-3. Create a tier [map of the supply chain](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/confluence/map_chain/index.html), showing how products will flow and where Critical Tracking Events (CTEs) occur. Assign input and output products (defined in Step 1) for each transformation per Role (defined in Step 2).
-4. [Define a risk management taxonomy (list of indicators)](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/confluence/indicator_list/index.html) to be used as the framework upon which users will combine Risk Assessment reports and other data inputs.
-5. [Upload the assessments or self-assessment questionnaires (SAQs)](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/confluence/assessment_config/index.html) to be used for each Producer Role (defined in Step 2). Questions in each assessment will align with the List of Indicators (defined in Step 4) and responses will contribute to the overall risk associated with a producer.
-6. [Specify the method by which various assessment inputs will be combined](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/confluence/risk_assessment/index.html) to determine the overall risk associated with a Producer. These inputs can include: external risk indices, assessment or SAQ responses (defined in Step 5), DNA test results, and compliance reports filed by assessors (defined in Step 2).
+1. [Define the products in the supply chain](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/docs/confluence/define_product/index.html) and assign Key Data Elements (KDEs) to each product.
+2. [Define the user roles and user permissions](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/docs/confluence/define_role/index.html) in the Global Trace instance.
+3. Create a tier [map of the supply chain](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/docs/confluence/map_chain/index.html), showing how products will flow and where Critical Tracking Events (CTEs) occur. Assign input and output products (defined in Step 1) for each transformation per Role (defined in Step 2).
+4. [Define a risk management taxonomy (list of indicators)](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/docs/confluence/indicator_list/index.html) to be used as the framework upon which users will combine Risk Assessment reports and other data inputs.
+5. [Upload the assessments or self-assessment questionnaires (SAQs)](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/docs/confluence/assessment_config/index.html) to be used for each Producer Role (defined in Step 2). Questions in each assessment will align with the List of Indicators (defined in Step 4) and responses will contribute to the overall risk associated with a producer.
+6. [Specify the method by which various assessment inputs will be combined](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/docs/confluence/risk_assessment/index.html) to determine the overall risk associated with a Producer. These inputs can include: external risk indices, assessment or SAQ responses (defined in Step 5), DNA test results, and compliance reports filed by assessors (defined in Step 2).
 
 ## User Support Resources
 
@@ -25,7 +25,7 @@ Please find user support resources here including links to training videos and u
 
 The technical documentation page is designed for developers, providing an in-depth description of the code behind the Global Trace platform. For more practical information on Global Trace, due diligence and risk management, please visit [Global Trace Protocol (GTP) Project website](https://www.eiq.ai/global-trace-protocol/). to navigate to the technical documentation page.
 
-[Follow this link](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/be-documentation/index.html) to navigate to the technical documentation page.
+[Follow this link](https://github.com/USDepartmentofLabor/Global-Trace-Backend/blob/main/docs/be-documentation/index.html) to navigate to the technical documentation page.
 
 # Diginex USDOL
 
